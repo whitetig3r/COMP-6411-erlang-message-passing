@@ -43,7 +43,7 @@ receive_messages_to_print() ->
     [CALLER, reply, PROCESS_IDENTIFIER, T_STAMP] ->
       io:fwrite("~w received ~w message from ~w (~w)~n",[CALLER, reply, PROCESS_IDENTIFIER, T_STAMP]),
       receive_messages_to_print()
-    after
-      10000 ->
+  after
+    10000 ->
         io:fwrite("Master has received no replies for 10 seconds, ending...")
   end.
