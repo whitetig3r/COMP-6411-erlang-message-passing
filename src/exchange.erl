@@ -8,7 +8,7 @@
 %%% Created : 13. Jun 2020 2:24 AM
 %%%-------------------------------------------------------------------
 -module(exchange).
--author("warrenwhite").
+-author("Warren White").
 -export([start/0, receive_messages_to_print/0]).
 
 start() ->

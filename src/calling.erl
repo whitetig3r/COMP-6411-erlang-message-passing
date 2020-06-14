@@ -7,7 +7,7 @@
 %%% Created : 13. Jun 2020 4:02 AM
 %%%-------------------------------------------------------------------
 -module(calling).
--author("warrenwhite").
+-author("Warren White").
 -export([receive_message/1, send_intro_message/2]).
 
  randomized_sleep() ->
