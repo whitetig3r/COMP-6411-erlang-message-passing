@@ -21,7 +21,8 @@ start() ->
   receive_messages_to_print().
 
 print_list(List)->
-  [io:format("~p: ~p ~n",[tuple_head(X),tuple_tail(X)]) || X <- List].
+  [io:format("~p: ~p ~n",[tuple_head(X),tuple_tail(X)]) || X <- List],
+  io:fwrite("~n").
 
 tuple_head(List) ->
   {HEAD, _} = List,
@@ -45,5 +46,6 @@ receive_messages_to_print() ->
       receive_messages_to_print()
   after
     10000 ->
-        io:fwrite("Master has received no replies for 10 seconds, ending...")
+        io:fwrite("Master has received no replies for 10 seconds, ending..."),
+        unregister(master)
   end.
