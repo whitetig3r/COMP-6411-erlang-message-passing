@@ -46,6 +46,6 @@ receive_messages_to_print() ->
       receive_messages_to_print()
   after
     10000 ->
-        io:fwrite("Master has received no replies for 10 seconds, ending..."),
+        io:fwrite("~nMaster has received no replies for 10 seconds, ending..."),
         unregister(master)
   end.

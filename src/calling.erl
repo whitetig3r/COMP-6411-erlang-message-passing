@@ -41,6 +41,6 @@
        receive_message(CALLER)
    after
     5000 ->
-      io:fwrite("Process ~w has received no calls for 5 seconds, ending... ~n",[CALLER]),
+      io:fwrite("~nProcess ~w has received no calls for 5 seconds, ending...~n",[CALLER]),
       exit(CALLER)
    end.
